@@ -10,10 +10,7 @@
 
 Bring-up notes for NVIDIA Jetson, Pixhawk / PX4, and the boards around them — device
 trees, drivers, CAN, ROS 2, and the companion-computer networking that ties it
-together. Each repo is the part the official docs skip: what broke, why, and the exact
-steps that fixed it — checked on the actual hardware, not a forum thread.
-
-So the next person doesn't lose a weekend to it.
+together. One board or stack per repo: the steps and the gotchas.
 
 ### Selected work
 
