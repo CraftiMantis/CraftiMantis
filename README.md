@@ -8,12 +8,12 @@
 
 ### About
 
-Hard-won, reproducible bring-up for NVIDIA Jetson, Pixhawk / PX4, and the boards
-around them — device trees, drivers, CAN, ROS 2, and the companion-computer
-networking that ties it all together. Every repository is validated end-to-end on
-real hardware and honest about what works and what doesn't. The aim is simple: the
-parts the official docs skip, written down so the next person doesn't lose a weekend
-to a dead-end forum thread.
+Bring-up notes for NVIDIA Jetson, Pixhawk / PX4, and the boards around them — device
+trees, drivers, CAN, ROS 2, and the companion-computer networking that ties it
+together. Each repo is the part the official docs skip: what broke, why, and the exact
+steps that fixed it — checked on the actual hardware, not a forum thread.
+
+So the next person doesn't lose a weekend to it.
 
 ### Selected work
 
