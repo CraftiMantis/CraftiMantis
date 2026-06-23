@@ -1,46 +1,23 @@
-<div align="center">
+I build closed-loop robots on the NVIDIA + ROS 2 stack — BLDC/CAN motor control,
+flight controllers turned into real-time motor MCUs, and the Jetson edge compute and
+networking underneath. Sim-to-real with Isaac Sim and Isaac Lab.
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0d3b2e,100:2ED47A&height=130&section=header&text=CraftiMantis&fontColor=eafff2&fontSize=46&fontAlignY=52&desc=embedded%20%C2%B7%20edge-AI%20%C2%B7%20robotics&descSize=16&descAlignY=80" width="100%" alt="CraftiMantis"/>
+The public repos here are the foundation the robots run on — board bring-up, drivers,
+and the cross-host comms.
 
-</div>
+### Building now
 
----
-
-### About
-
-Bring-up notes for NVIDIA Jetson, Pixhawk / PX4, and the boards around them — device
-trees, drivers, CAN, ROS 2, and the companion-computer networking that ties it
-together. One board or stack per repo: the steps and the gotchas.
+- **AK80-9 V3 motor control** — a `ros2_control` SystemInterface for the CubeMARS AK80-9 V3 over SocketCAN
+- **Pixhawk 6X as a motor MCU** — ArduPilot + Lua + Scripting-CAN, Jetson companion over the baseboard's internal ethernet → [jetson-pixhawk-baseboard-jp72](https://github.com/CraftiMantis/jetson-pixhawk-baseboard-jp72)
+- **Hoverboard hub motors on open firmware** — Artery AT32F413 mainboard reflashed and driven over UART, with a browser test bench on a Pi
+- **Wheel-legged platform** — Isaac Sim → policy → hardware
 
 ### Selected work
 
-<div align="center">
-<a href="https://github.com/CraftiMantis/jetson-pixhawk-baseboard-jp72">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=CraftiMantis&repo=jetson-pixhawk-baseboard-jp72&title_color=2ED47A&icon_color=2ED47A&text_color=c9d1d9&bg_color=0d1117&border_color=21262d&show_owner=false" alt="jetson-pixhawk-baseboard-jp72"/>
-</a>
-<a href="https://github.com/CraftiMantis/jetson-orin-nx-jp72-wifi">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=CraftiMantis&repo=jetson-orin-nx-jp72-wifi&title_color=2ED47A&icon_color=2ED47A&text_color=c9d1d9&bg_color=0d1117&border_color=21262d&show_owner=false" alt="jetson-orin-nx-jp72-wifi"/>
-</a>
-<a href="https://github.com/CraftiMantis/seeed-a203v2-xavier-nx-bringup">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=CraftiMantis&repo=seeed-a203v2-xavier-nx-bringup&title_color=2ED47A&icon_color=2ED47A&text_color=c9d1d9&bg_color=0d1117&border_color=21262d&show_owner=false" alt="seeed-a203v2-xavier-nx-bringup"/>
-</a>
-</div>
-
-- **jetson-pixhawk-baseboard-jp72** — Jetson ↔ Pixhawk over ethernet (MAVLink + uXRCE-DDS) on the Holybro Pixhawk Jetson Baseboard, JetPack 7.2
-- **jetson-orin-nx-jp72-wifi** — Intel / MediaTek / Realtek Wi-Fi drivers built from source for Jetson Orin on JetPack 7.2
-- **seeed-a203v2-xavier-nx-bringup** — flashing, device tree, UART & CAN bring-up for the Seeed A203-V2 carrier + Xavier NX
-
-### In progress
-
-- Pixhawk / PX4 companion-computer integration on Jetson — uXRCE-DDS and ROS 2
-- CubeMARS AK80-9 V3 motor control + `ros2_control` over SocketCAN
-- Reviving EOL Jetson Xavier NX on a modern stack (JetPack 6, keeping the GPU alive)
+- **[jetson-pixhawk-baseboard-jp72](https://github.com/CraftiMantis/jetson-pixhawk-baseboard-jp72)** — Jetson ↔ Pixhawk over the baseboard ethernet switch (MAVLink + uXRCE-DDS), JetPack 7.2
+- **[jetson-orin-nx-jp72-wifi](https://github.com/CraftiMantis/jetson-orin-nx-jp72-wifi)** — Intel / MediaTek / Realtek Wi-Fi drivers built from source for Jetson Orin, JetPack 7.2
+- **[seeed-a203v2-xavier-nx-bringup](https://github.com/CraftiMantis/seeed-a203v2-xavier-nx-bringup)** — flashing, device tree, UART & CAN bring-up for the Seeed A203-V2 + Xavier NX
 
 ### Stack
 
-`Jetson` · `CUDA` · `ROS 2` · `PX4 / MAVLink` · `Linux` · `device trees` · `CAN` · `C` · `Python` · `Bash` · `Docker`
-
-<div align="center">
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=CraftiMantis&show_icons=true&hide_border=true&title_color=2ED47A&icon_color=2ED47A&text_color=c9d1d9&bg_color=0d1117" alt="stats"/>
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CraftiMantis&layout=compact&hide_border=true&title_color=2ED47A&text_color=c9d1d9&bg_color=0d1117&langs_count=8" alt="top langs"/>
-</div>
+NVIDIA Jetson · Isaac Sim / Isaac Lab · ROS 2 · PX4 / ArduPilot · MAVLink · SocketCAN · BLDC / FOC · Linux / device trees · C · Python
